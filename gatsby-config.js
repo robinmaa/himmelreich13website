@@ -1,7 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `himmelreich13`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Entwurf Website Himmelreich",
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      }
+    },
+    "gatsby-plugin-mdx",
+  ],
+};
